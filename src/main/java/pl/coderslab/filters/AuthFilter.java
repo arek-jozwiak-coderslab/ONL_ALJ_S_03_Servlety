@@ -21,9 +21,9 @@ public class AuthFilter implements Filter {
 
         HttpSession httpSession = request.getSession(); //pobieram sesje
 
-        if(httpSession.getAttribute("username")==null){ //sprawdzam czy w sesji istnieje username (zeby sprawdzic czy user jest zalogowany)
+        if (httpSession.getAttribute("username") == null) { //sprawdzam czy w sesji istnieje username (zeby sprawdzic czy user jest zalogowany)
             response.sendRedirect("/login?msg=error"); // jesli nie jestem zalogowany to robimy redirect
-        }else {
+        } else {
             filterChain.doFilter(servletRequest, servletResponse); // jesli zalogowany to dopiero wtedy robimy przekazanie do potencjalnych
             // innych filtrow lub do servletu
         }
