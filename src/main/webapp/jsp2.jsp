@@ -10,7 +10,6 @@
     <c:forEach var="item" begin="${start}" end="${end}">
         <li>${item}</li>
     </c:forEach>
-
 </ul>
 </body>
 </html>

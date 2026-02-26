@@ -10,6 +10,7 @@ import java.io.IOException;
 public class Mvc12 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("mvc12");
         int start = Integer.parseInt(request.getParameter("start")) + 10;
         int end = Integer.parseInt(request.getParameter("end")) + 10;
         request.setAttribute("start", start);
